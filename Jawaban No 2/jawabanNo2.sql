@@ -4,12 +4,14 @@
 -- Untuk Mendapatkan Date swab
     SELECT swabDate, COUNT(swabDate) AS CountDateOfSwab 
     FROM db_microsite.`user` 
-    GROUP BY swabDate; 
+    GROUP BY swabDate
+    ORDER BY swabDate ASC;
 
 -- Untuk Mendapatkan Date antigen
     SELECT antigenDate, COUNT(antigenDate) AS CountDateOfAntigen 
     FROM db_microsite.`user` 
-    GROUP BY antigenDate;
+    GROUP BY antigenDate
+    ORDER BY antigenDate ASC;
 
 -----------------------------------------------------------------------------------------
 
