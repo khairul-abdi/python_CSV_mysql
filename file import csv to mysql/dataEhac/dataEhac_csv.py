@@ -49,10 +49,9 @@ def create_table(mydb):
 def import_data(mydb):
   with open("dataEHac.csv", newline='') as csv_file:
       csv_reader= csv.reader(csv_file, delimiter=",")
-      status = 0
       i = 0
       for row in csv_reader:
-        if status != 0:
+        if i != 0:
          
           if row[2][2] == "/":
             dataSplit = row[3].split("/")
@@ -63,8 +62,7 @@ def import_data(mydb):
           mycursor.execute(sql,row)
           mydb.commit()
           print("Load ... ", i)
-          i += 1
-        status = 1
+        i+= 1
 
   print("Data berhasil di import!") 
 

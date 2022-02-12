@@ -43,11 +43,10 @@ def create_table(mydb):
 def import_data(mydb):
   with open("dataMicrosite.csv", newline='') as csv_file:
       csv_reader= csv.reader(csv_file, delimiter=",")
-      status = 0
       i = 0
 
       for row in csv_reader:
-        if status != 0:
+        if i != 0:
 
           if row[6].lower() == "true":
             row[6] = 1
@@ -69,8 +68,7 @@ def import_data(mydb):
           mycursor.execute(sql,row)
           mydb.commit()
           print("load...", i)
-          i+= 1
-        status = 1
+        i+= 1
   print("Data berhasil di import!") 
 
 def insert_data(mydb):

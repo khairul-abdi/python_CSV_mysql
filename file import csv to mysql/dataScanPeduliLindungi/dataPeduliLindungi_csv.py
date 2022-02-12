@@ -43,18 +43,16 @@ def create_table(mydb):
 def import_data(mydb):
   with open("dataScanPeduliLindungi.csv", newline='') as csv_file:
       csv_reader= csv.reader(csv_file, delimiter=",")
-      status = 0
       i = 0
       for row in csv_reader:
-        if status != 0:
+        if i != 0:
          
           sql = "INSERT INTO `db_dataHealth`.`user_scanPeduliLindungi` (`sid`,`userId`,`user_status`,`checkInTime`,`checkOutTime`,`place_name`,`place_categoryName`,`locationAddress`,`location_latitude`,`location_longitude`,`crowd`,`status`,`userStatus`,`updatedAt`,`createdAt`) VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)"
           mycursor = mydb.cursor()
           mycursor.execute(sql,row)
           mydb.commit()
           print("load...", i)
-          i+= 1
-        status = 1
+        i+= 1
 
   print("Data berhasil di import!") 
 
