@@ -1,0 +1,4 @@
+sid,userId,place,swabDate,swabResult,swabHospital,swabValid,antigenDate,antigenResult,antigenHospital,antigenValid,flightStatus,createdAt,updatedAt
+60fb7e041ccf9ed2fdf4e3fa,e0ee4dc0-b7f0-11eb-8988-5fb466026cb9,SRG,2021-07-23,NEGATIF,LABORATORIUM KLINIK ESENSIA SEMARANG,true,2021-07-18,POSITIF,KLINIK UTAMA RAWAT INAP ESENSIA,false,false,2021-07-24,2021-07-24
+60fcfb6384c7bb281bf4423d,e0ee4dc0-b7f0-11eb-8988-5fb466026cb9,SRG,2021-07-24,NEGATIF,LABORATORIUM KF SEMARANG,true,2021-07-23,NEGATIF,RS Islam Surakarta YARSIS,false,true,2021-07-25,2021-07-25
+613815f6d5e841a26798d24a,c76daa70-eda2-11eb-b283-bf3fd4393649,KKP Kelas II Jayapura Akun 2,1970-01-01,NULL,NULL,false,2021-09-08,NEGATIF,LABORATORIUM KLINIK ASA,true,false,2021-09-08,2021-09-08
